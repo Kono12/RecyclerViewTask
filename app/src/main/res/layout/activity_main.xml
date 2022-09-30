@@ -20,5 +20,19 @@
             />
 
     </FrameLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_button"
+        android:onClick="AddButtonClicked"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="24dp"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:background="@drawable/add_button"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

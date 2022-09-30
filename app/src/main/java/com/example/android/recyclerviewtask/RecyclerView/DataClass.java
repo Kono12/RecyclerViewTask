@@ -1,15 +1,26 @@
 package com.example.android.recyclerviewtask.RecyclerView;
 
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class DataClass {
     String Title,Content;
     int img;
-
-    public DataClass(String title, String content, int img) {
-        Title = title;
-        Content = content;
+    @PrimaryKey(autoGenerate = true)
+    int id;
+    public DataClass(String Title, String Content, int img) {
+       this.Title = Title;
+        this.Content = Content;
         this.img = img;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId(){return id;}
     public String getTitle() {
         return Title;
     }
