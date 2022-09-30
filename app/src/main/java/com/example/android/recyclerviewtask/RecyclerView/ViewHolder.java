@@ -27,9 +27,16 @@ public class ViewHolder extends RecyclerView.ViewHolder {
               public void onClick(View view) {
                   recyclerInterFace.OnCkick(getAdapterPosition());
                 //  Toast.makeText(content.getContext(), title.getText(), Toast.LENGTH_SHORT).show();
-
               }
           });
+        itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                recyclerInterFace.OnLongClick(getAdapterPosition());
+               return true;
+               //  Toast.makeText(content.getContext(), title.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }

@@ -21,6 +21,7 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     public Adapter(ArrayList<DataClass> arrayList){
         this.arrayList=arrayList;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -39,7 +40,8 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public int getItemCount() {return arrayList.size();}
 
-    public void setOnClick(RecyclerInterFace recyclerInterFace){
-        this.recyclerInterFace=recyclerInterFace;
+    public boolean setClick(RecyclerInterFace recyclerInterFace){
+        this.recyclerInterFace =recyclerInterFace;
+        return true;
     }
 }
